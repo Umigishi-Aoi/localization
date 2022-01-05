@@ -1,0 +1,14 @@
+{
+  "title": "Flutter Demo Home Page",
+  "@title": {
+    "description": "to show title"
+  },
+  "explanation": "You have pushed the button this many times:",
+  "@explanation": {
+    "description": "to show explanation"
+  },
+  "tooltip": "Increment",
+  "@tooltip": {
+    "description": "to show tooltip"
+  }
+}
