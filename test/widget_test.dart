@@ -49,6 +49,11 @@ void main() {
     await tester.pumpWidgetBuilder(myAppTest('en'), surfaceSize: size);
 
     await screenMatchesGolden(tester, 'myApp_en');
+
+    //英語以外のテスト
+    await tester.pumpWidgetBuilder(myAppTest('es'), surfaceSize: size);
+
+    await screenMatchesGolden(tester, 'myApp_es');
   });
 
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
