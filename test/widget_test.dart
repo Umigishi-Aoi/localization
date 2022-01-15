@@ -15,7 +15,7 @@ import 'package:localization/main.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 //テスト用Widgetを定義　言語を引数に取るように設定
-Widget TestWidget(String language) {
+Widget myAppTest(String language) {
   return MaterialApp(
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
@@ -44,12 +44,12 @@ void main() {
     final size = Size(415, 896);
 
     //日本語のテスト
-    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size);
+    await tester.pumpWidgetBuilder(myAppTest('ja'), surfaceSize: size);
 
     await screenMatchesGolden(tester, 'myApp_ja');
 
     //英語のテスト
-    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size);
+    await tester.pumpWidgetBuilder(myAppTest('en'), surfaceSize: size);
 
     await screenMatchesGolden(tester, 'myApp_en');
   });
