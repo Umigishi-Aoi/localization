@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        // fontFamily: 'font/Mplus1-Regular.ttf'
       ),
       home: Builder(builder: (context) {
         return MyHomePage(title: AppLocalizations.of(context)!.title);
@@ -50,7 +49,6 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           widget.title,
-          // style: const TextStyle(fontFamily: 'MPLUS1'),
         ),
       ),
       body: Center(
@@ -59,7 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               AppLocalizations.of(context)!.explanation,
-              // style: const TextStyle(fontFamily: 'MPLUS1'),
             ),
             Text(
               '$_counter',
