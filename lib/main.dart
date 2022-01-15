@@ -18,11 +18,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Builder(
-        builder: (context) {
-          return MyHomePage(title: AppLocalizations.of(context)!.title);
-        }
-      ),
+      home: Builder(builder: (context) {
+        return MyHomePage(title: AppLocalizations.of(context)!.title);
+      }),
     );
   }
 }
@@ -49,7 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+        ),
       ),
       body: Center(
         child: Column(
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: AppLocalizations.of(context)!.tooltip,
         child: const Icon(Icons.add),
-      ), 
+      ),
     );
   }
 }
