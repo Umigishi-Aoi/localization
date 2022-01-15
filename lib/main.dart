@@ -17,12 +17,11 @@ class MyApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        // fontFamily: 'font/Mplus1-Regular.ttf'
       ),
-      home: Builder(
-        builder: (context) {
-          return MyHomePage(title: AppLocalizations.of(context)!.title);
-        }
-      ),
+      home: Builder(builder: (context) {
+        return MyHomePage(title: AppLocalizations.of(context)!.title);
+      }),
     );
   }
 }
@@ -49,7 +48,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: const TextStyle(fontFamily: 'MPLUS1'),
+        ),
       ),
       body: Center(
         child: Column(
@@ -57,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               AppLocalizations.of(context)!.explanation,
+              style: const TextStyle(fontFamily: 'MPLUS1'),
             ),
             Text(
               '$_counter',
@@ -69,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: AppLocalizations.of(context)!.tooltip,
         child: const Icon(Icons.add),
-      ), 
+      ),
     );
   }
 }
