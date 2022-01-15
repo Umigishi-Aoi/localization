@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:golden_toolkit/golden_toolkit.dart';
 
 import 'package:localization/main.dart';
 
@@ -26,5 +27,16 @@ void main() {
     // Verify that our counter has incremented.
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
+  });
+
+  testGoldens('golden test', (WidgetTester tester) async {
+    //デバイスの画面サイズ
+    final size = Size(415, 896);
+
+    //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
+    await tester.pumpWidgetBuilder(MyApp(), surfaceSize: size);
+
+    //マスターのスクリーンショットと同じかテストする
+    await screenMatchesGolden(tester, 'myApp');
   });
 }

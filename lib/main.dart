@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           widget.title,
-          style: const TextStyle(fontFamily: 'MPLUS1'),
+          // style: const TextStyle(fontFamily: 'MPLUS1'),
         ),
       ),
       body: Center(
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               AppLocalizations.of(context)!.explanation,
-              style: const TextStyle(fontFamily: 'MPLUS1'),
+              // style: const TextStyle(fontFamily: 'MPLUS1'),
             ),
             Text(
               '$_counter',
