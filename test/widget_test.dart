@@ -24,7 +24,7 @@ Widget myAppTest(String language) {
   );
 }
 
-//日本語フォントの読み込み
+//日本語フォントの読み込み用メソッド
 Future<void> loadJapaneseFont() async {
   TestWidgetsFlutterBinding.ensureInitialized();
   final binary = rootBundle.load('font/Mplus1-Regular.ttf');
